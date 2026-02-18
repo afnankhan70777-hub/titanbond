@@ -81,6 +81,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            white-space: nowrap;
         }
 
         nav ul {
@@ -675,7 +676,8 @@
 
             nav {
                 padding: 0 1rem;
-                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
                 justify-content: center;
             }
 
@@ -683,16 +685,18 @@
                 width: 100%;
                 text-align: center;
                 margin-bottom: 0.5rem;
+                justify-content: center;
+                gap: 0.6rem;
             }
 
             nav ul {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 0.5rem;
+                flex-direction: column;
+                gap: 0.4rem;
                 text-align: center;
                 justify-content: center;
                 width: 100%;
                 font-size: 0.9rem;
+                margin-top: 0.5rem;
             }
 
             nav a {
@@ -905,7 +909,8 @@
             }
 
             nav .logo span {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                letter-spacing: 0.5px;
             }
 
             .logo-img {
