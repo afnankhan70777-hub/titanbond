@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITAN BOND - Premium Industrial Adhesives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Segoe UI', serif;
+            line-height: 1.6;
+            color: #2a2a2a;
+            background: #ddd5cc;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%);
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 4px solid #b8860b;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+            background: transparent;
+        }
+
+        .logo::before {
+            content: '';
+            display: none;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, #d4af37, #e8c547);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 3.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            position: relative;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d4af37;
+            transition: width 0.4s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .flag-sticker {
+            height: 20px;
+            width: auto;
+            display: inline-block;
+            margin: 0 5px;
+            vertical-align: middle;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #6B4414 100%);
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect fill="url(%23dots)" width="1200" height="600"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 5.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .flag {
+            font-size: 4rem;
+            display: inline-block;
+            margin: 0 1rem;
+            animation: gentle-bounce 2.5s ease-in-out infinite;
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p:nth-of-type(3) {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #d4af37, #e8c547);
+            color: #2a2a2a;
+            padding: 1.2rem 3.5rem;
+            text-decoration: none;
+            border: none;
+            font-weight: 900;
+            transition: all 0.4s ease;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            margin-top: 2rem;
+            min-height: 48px;
+            border-radius: 4px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #e8c547, #f4d55b);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Product Showcase Section */
+        .products {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ddd5cc 0%, #d4c9b9 100%);
+        }
+
+        .products h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #A91D3A;
+            text-align: center;
+        }
+
+        .products-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            border: 3px solid #d4af37;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #f5f5f1;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 2rem;
+            background: white;
+        }
+
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #A91D3A;
+            font-weight: 900;
+        }
+
+        .product-tagline {
+            font-size: 0.95rem;
+            color: #d4af37;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+
+        .about {
+            padding: 6rem 2rem;
+            background: #f5f5f1;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #A91D3A;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-left: 5px solid #d4af37;
+            border-right: 5px solid #d4af37;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2a2a2a;
+        }
+
+        .about-content p:first-child {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #A91D3A;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-content p:last-child {
+            font-weight: 700;
+            color: #A91D3A;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* Uses/Applications Section */
+        .uses {
+            padding: 6rem 2rem;
+            background: #f5f5f1;
+        }
+
+        .uses h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #A91D3A;
+            text-align: center;
+        }
+
+        .uses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .use-card {
+            background: white;
+            padding: 2.5rem;
+            border-left: 5px solid #d4af37;
+            border-radius: 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .use-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #fff9f5 0%, #fff5f0 100%);
+        }
+
+        .use-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #A91D3A;
+            font-weight: 900;
+        }
+
+        .use-card p {
+            font-size: 0.95rem;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #A91D3A 0%, #8B1538 50%, #6B0F2A 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent);
+            border-radius: 50%;
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-40px); }
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #d4af37;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Featured Section */
+        .featured {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f5f5f1 0%, #ede7de 100%);
+        }
+
+        .featured-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured h2 {
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #A91D3A;
+            text-align: center;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .featured-item {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s ease;
+            border-top: 4px solid #d4af37;
+            border-bottom: 4px solid #A91D3A;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .featured-item h3 {
+            font-size: 1.6rem;
+            color: #A91D3A;
+            font-weight: 900;
+            padding: 2rem 2rem 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .featured-item p {
+            padding: 0 2rem 2rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* Specifications Section */
+        .specs {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #A91D3A 0%, #8B1538 50%, #6B0F2A 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specs::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent);
+            border-radius: 50%;
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        .specs-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .specs h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .specs-intro {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .specs-download {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 3rem;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem 4rem;
+            background: linear-gradient(135deg, #d4af37, #e8c547);
+            color: #2a2a2a;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            min-height: 48px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #e8c547, #f4d55b);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .download-icon {
+            font-size: 2.5rem;
+            display: block;
+        }
+
+        .download-text {
+            display: block;
+        }
+
+        .specs-note {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-top: 4px solid #d4af37;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                text-align: center;
+                justify-content: center;
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            nav a {
+                padding: 0.5rem 0.8rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+                min-height: 60vh;
+            }
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+                margin: 0.3rem 0;
+            }
+
+            .flag-sticker {
+                height: 14px;
+                width: auto;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+                margin-top: 1rem;
+                display: inline-block;
+                min-height: 44px;
+                min-width: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .about {
+                padding: 2rem 1rem;
+            }
+
+            .products {
+                padding: 2rem 1rem;
+            }
+
+            .products h2,
+            .about h2,
+            .uses h2,
+            .featured h2,
+            .specs h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .products-showcase {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .product-item {
+                padding: 1rem;
+            }
+
+            .product-item img {
+                max-height: 250px;
+            }
+
+            .uses-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .use-card {
+                padding: 1.5rem;
+            }
+
+            .use-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .featured {
+                padding: 2rem 1rem;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .featured-item {
+                padding: 1rem;
+            }
+
+            .featured-item img {
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .featured-item h3 {
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+            }
+
+            .specs {
+                padding: 2rem 1rem;
+            }
+
+            .download-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            footer {
+                padding: 2rem 1rem;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 0.3rem;
+                font-size: 0.8rem;
+            }
+
+            nav a {
+                padding: 0.4rem 0.6rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.85rem;
+            }
+
+            .cta-button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .about h2,
+            .products h2,
+            .uses h2,
+            .featured h2,
+            .specs h2 {
+                font-size: 1.5rem;
+            }
+
+            .use-card h3,
+            .featured-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .download-btn {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            header {
+                padding: 0.8rem 0;
+            }
+
+            nav .logo span {
+                font-size: 1rem;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="TITAN BOND Logo" class="logo-img">
+                <span>TITAN BOND</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#uses">Applications</a></li>
+                <li><a href="#featured">Features</a></li>
+                <li><a href="#specs">Specs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>TITAN BOND</h1>
+            <p>Premium Industrial Adhesives</p>
+            <p>Formulated in <img src="flag-us.svg" alt="USA" class="flag-sticker"> • Operating in Pakistan 🇵🇰</p>
+            <p>STRENGTH IS OUR IDENTITY</p>
+            <a href="#featured" class="cta-button">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About TITAN BOND</h2>
+        <div class="about-content">
+            <p>AT TITAN BOND, STRENGTH IS OUR IDENTITY</p>
+            <p>Proudly operating in Pakistan and formulated in <img src="flag-us.svg" alt="USA" class="flag-sticker" style="height: 18px; margin: 0 2px;">, TITAN BOND represents a fusion of advanced formulation expertise and uncompromising quality standards. We deliver premium adhesive solutions engineered for superior bonding strength, durability, and long-term reliability.</p>
+            <p>Designed for industries that demand performance — from footwear manufacturing to heavy-duty industrial applications — our products are developed using high-grade raw materials and strict quality control processes to ensure consistent results under pressure.</p>
+            <p>At TITAN BOND, we believe a true bond grows stronger over time. That is why every product reflects our commitment to precision, innovation, and trust.</p>
+            <p>FORMULATED FOR STRENGTH • BUILT TO LAST</p>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="products" id="products">
+        <h2>Our Premium Products</h2>
+        <div class="products-showcase">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="product1.jpeg" alt="TITAN BOND Industrial Adhesive">
+                </div>
+                <div class="product-info">
+                    <h3>TITAN BOND Industrial Adhesive</h3>
+                    <p class="product-tagline">PREMIUM FORMULA</p>
+                    <p class="product-description">Professional-grade adhesive specifically engineered for industrial applications. Superior bonding strength and durability for demanding manufacturing environments.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="product2.jpeg" alt="TITAN BOND Footwear Adhesive">
+                </div>
+                <div class="product-info">
+                    <h3>TITAN BOND Footwear Adhesive</h3>
+                    <p class="product-tagline">FAST DRYING FORMULA</p>
+                    <p class="product-description">Specialized formulation for the footwear industry. Engineered for superior shoe sole bonding and manufacturing applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uses/Applications Section -->
+    <section class="uses" id="uses">
+        <h2>Applications & Industries</h2>
+        <div class="uses-grid">
+            <div class="use-card">
+                <h3>Industrial Uses</h3>
+                <p>Heavy-duty bonding solutions for machinery assembly, equipment repair, and demanding industrial bonding requirements across manufacturing sectors.</p>
+            </div>
+            <div class="use-card">
+                <h3>Footwear Industry</h3>
+                <p>Professional-grade adhesive specifically formulated for shoe manufacturing and repair. Engineered for superior sole bonding and durability.</p>
+            </div>
+            <div class="use-card">
+                <h3>Furniture & Interior</h3>
+                <p>Reliable bonding solutions for furniture assembly, panel bonding, and interior design applications requiring precision and long-term strength.</p>
+            </div>
+            <div class="use-card">
+                <h3>Automotive Applications</h3>
+                <p>Specialized adhesive for vehicle assembly, component bonding, and automotive manufacturing requiring high-performance durability under pressure.</p>
+            </div>
+            <div class="use-card">
+                <h3>General Applications</h3>
+                <p>Versatile adhesive formulations suitable for various general-purpose bonding needs across multiple industries and repair applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="featured">
+        <div class="featured-container">
+            <h2>Why Choose TITAN BOND?</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="1.jpeg" alt="TITAN BOND Quality">
+                    <h3>Premium Quality</h3>
+                    <p>Engineered with precision and care, our adhesives meet the highest industry standards for performance and reliability.</p>
+                </div>
+                <div class="featured-item">
+                    <img src="2.jpeg" alt="TITAN BOND Innovation">
+                    <h3>Innovation & Performance</h3>
+                    <p>Advanced formulations developed through extensive research to deliver superior bonding strength in every application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specs" id="specs">
+        <div class="specs-container">
+            <h2>Technical Specifications</h2>
+            <p class="specs-intro">Download our comprehensive technical documentation to learn more about TITAN BOND's superior formulation and performance characteristics.</p>
+            <div class="specs-download">
+                <a href="3.pdf" download class="download-btn">
+                    <span class="download-icon">📄</span>
+                    <span class="download-text">Download Full Specifications</span>
+                </a>
+                <p class="specs-note">Complete technical data, compatibility information, and application guidelines</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 TITAN BOND | Formulated in <img src="flag-us.svg" alt="USA" class="flag-sticker" style="height: 12px; margin: 0 3px;"> • Operating in Pakistan 🇵🇰 | All rights reserved</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Only prevent default for internal links, not external links
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
