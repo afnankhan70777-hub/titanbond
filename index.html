@@ -90,18 +90,6 @@
             gap: 3.5rem;
         }
 
-        .nav-toggle {
-            display: none;
-            background: transparent;
-            color: #d4af37;
-            border: 2px solid #d4af37;
-            padding: 0.4rem 0.9rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
         nav a {
             color: white;
             text-decoration: none;
@@ -713,25 +701,14 @@
                 text-align: center;
                 gap: 0.6rem;
                 flex-wrap: wrap;
-                display: none;
-                flex-direction: column;
-            }
-
-            header.nav-open nav ul {
                 display: flex;
-            }
-
-            .nav-toggle {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 40px;
-                min-width: 88px;
+                flex-direction: row;
             }
 
             nav a {
                 font-size: 0.85rem;
                 letter-spacing: 1px;
+                padding: 0.35rem 0.5rem;
             }
 
             .logo-img {
@@ -760,8 +737,9 @@
             }
 
             nav ul {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 0.4rem;
+                flex-wrap: wrap;
                 text-align: center;
                 justify-content: center;
                 width: 100%;
@@ -922,7 +900,8 @@
             nav ul {
                 gap: 0.3rem;
                 font-size: 0.8rem;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
             }
 
             nav a {
@@ -997,9 +976,6 @@
                 <img src="logo.png" alt="TITAN BOND Logo" class="logo-img">
                 <span>TITAN BOND</span>
             </div>
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                Menu
-            </button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -1140,25 +1116,6 @@
             });
         });
 
-        const navToggle = document.querySelector('.nav-toggle');
-        const header = document.querySelector('header');
-        const navLinks = document.querySelectorAll('nav a');
-
-        if (navToggle && header) {
-            navToggle.addEventListener('click', () => {
-                const isOpen = header.classList.toggle('nav-open');
-                navToggle.setAttribute('aria-expanded', String(isOpen));
-            });
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (header.classList.contains('nav-open')) {
-                    header.classList.remove('nav-open');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
     </script>
 </body>
 </html>
